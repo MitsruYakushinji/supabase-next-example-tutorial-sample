@@ -7,7 +7,7 @@ name: Build and Test
 
 jobs:
   publish:
-    runs-on: ${{ vars.SELF_HOSTED_RUNNER == 'true' && vars.RUNS_ON != '' && fromJSON(vars.RUNS_ON) || 'ubuntu-latest' }}
+    runs-on: ${{ vars.SELF_HOSTED_RUNNER == 'true' && vars.RUNS_ON != '' && 'arc-runner-set' || 'ubuntu-latest' }}
 
     name: Build and Test
     steps:
