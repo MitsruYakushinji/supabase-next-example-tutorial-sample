@@ -1,0 +1,22 @@
+{
+  "extends": ["./node_modules/gts/", "next/core-web-vitals"],
+  "rules": {
+    "node/no-extraneous-import": "off",
+    "node/no-unpublished-import": "off",
+    "node/no-unpublished-require": "off",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useRecoilCallback"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["packages/**/*"],
+      "rules": {
+        "@next/next/no-img-element": "off"
+      }
+    }
+  ]
+}
