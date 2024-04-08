@@ -23,6 +23,7 @@ First, run the development server:
 
 ```bash
 pnpm dev
+pnpm storybook
 ```
 
 ### Prerequisites
@@ -39,3 +40,4 @@ pnpm dev
 - [typescript](https://www.typescriptlang.org/)
 - [react](https://reactjs.org/)
 - [zx](https://github.com/google/zx)
+- [storybook](https://storybook.js.org/)

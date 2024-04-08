@@ -1,5 +1,9 @@
 {
-  "extends": ["./node_modules/gts/", "next/core-web-vitals"],
+  "extends": [
+    "./node_modules/gts/",
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
+  ],
   "rules": {
     "node/no-extraneous-import": "off",
     "node/no-unpublished-import": "off",
