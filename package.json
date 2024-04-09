@@ -77,7 +77,7 @@
     "tsx": "^4.7.2",
     "type-fest": "^4.15.0",
     "typescript": "~5.3.0",
-    "zx": "^7.2.3"
+    "zx": "^8.0.1"
   },
   "lint-staged": {
     "*.{css,scss,md,mdx,json}": "prettier --write",
