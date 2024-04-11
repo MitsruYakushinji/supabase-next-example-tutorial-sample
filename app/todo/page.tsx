@@ -1,7 +1,6 @@
 import {Metadata} from 'next';
 
-import TodoForm from './form';
-import TodoList from './list';
+import TodoContents from './contents';
 
 export const metadata: Metadata = {
   title: 'TODO | BASE',
@@ -9,19 +8,11 @@ export const metadata: Metadata = {
 
 export default async function Todo() {
   return (
-    <div>
-      <h1>TODO Page</h1>
-      <TodoForm></TodoForm>
-      <hr />
-      <table>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <TodoList></TodoList>
-      </table>
+    <div className={'card mx-32 mt-6 w-auto bg-base-100 p-6 shadow-xl'}>
+      <h1 className={'mb-6 text-center text-4xl font-extrabold tracking-wider'}>
+        TODO Page
+      </h1>
+      <TodoContents></TodoContents>
     </div>
   );
 }

@@ -1,0 +1,39 @@
+/* stylelint-disable scss/operator-no-newline-after */
+.switch {
+  --perceived-lightness: calc(
+    (
+        (var(--tag-r) * 0.2126) + (var(--tag-g) * 0.7152) +
+          (var(--tag-b) * 0.0722)
+      ) / 255
+  );
+  --lightness-switch: max(
+    0,
+    min(
+      calc((1 / (var(--lightness-threshold) - var(--perceived-lightness)))),
+      1
+    )
+  );
+}
+
+:global([data-theme='corporate']) .switch {
+  color: hsl(0deg 0% calc(var(--lightness-switch) * 100%));
+  background: rgb(229 231 235);
+  border-color: hsl(0deg 0% calc(var(--lightness-switch) * 100%));
+
+  --lightness-threshold: 0.4;
+}
+
+:global([data-theme='business']) .switch {
+  color: hsl(
+    var(--tag-h) calc(var(--tag-s) * 1%)
+      calc((var(--tag-l) + var(--lighten-by)) * 1%)
+  );
+  background: rgba(229 231 235 / 10%);
+  border-color: rgba(var(--tag-r) var(--tag-g) var(--tag-b) / 60%);
+
+  --lightness-threshold: 0.6;
+  --lighten-by: calc(
+    ((var(--lightness-threshold) - var(--perceived-lightness)) * 100) *
+      var(--lightness-switch)
+  );
+}
