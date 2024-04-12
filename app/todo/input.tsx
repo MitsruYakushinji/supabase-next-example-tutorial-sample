@@ -27,13 +27,13 @@ export default function InputTextField(props: InputTextFieldProps) {
         onChange={inputValidation}
       />
 
-      {props.errorMessage && !isValid && (
-        <label className="label">
+      <label className="label h-6">
+        {props.errorMessage && !isValid && (
           <span className="label-text-alt text-error">
             {props.errorMessage}
           </span>
-        </label>
-      )}
+        )}
+      </label>
     </div>
   );
 }
